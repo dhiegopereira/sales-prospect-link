@@ -10,7 +10,7 @@ import {
   CardText,
   IconContent,
   IconSocial
-} from './styles'
+} from '../styles/styles'
 
 import Link from 'next/link';
 
