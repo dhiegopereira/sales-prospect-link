@@ -43,7 +43,7 @@ export default function Home() {
     {
       src: './whatsapp.png',
       alt: 'Whatsapp',
-      href: 'https://www.instagram.com/leiidyane1/',
+      href: 'https://api.whatsapp.com/send?phone=5588993321272&text=Estou%20entrando%20em%20contato%20pois%20gostei%20muito%20do%20seu%20perfil.%20Podemos%20conversa?',
       size: 30
     }
   ])
