@@ -57,6 +57,11 @@ export const CardContent = styled.div`
     align-items: center;
 
     position: relative;
+
+    @media ${device.mobileL} {
+        padding:10px 5px 10px 5px;
+    }
+
 `
 export const CardBorder = styled.div`
     width: 506px;    
@@ -71,6 +76,11 @@ export const CardBorder = styled.div`
     justify-content: center;
 
     position: absolute;
+
+    @media ${device.mobileL} {
+        width: 100%;
+        margin: 5px;
+    }
 
   
 `
@@ -92,8 +102,9 @@ export const CardText = styled.div`
 
     position: relative;
 
-    @media ${device.tablet} {
+    @media ${device.mobileL} {
         width: 100%;
+        font-size: 15px
     }
 `
 
