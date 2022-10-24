@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {device} from './device';
 
 export const Container = styled.div`
     width: 100vw;
@@ -35,7 +36,7 @@ export const Heading2 = styled.h2`
     line-height: 36px;  
     &::after {
         content: '${ props => props.text}' 
-    };
+    };    
 ` 
 
 export const Paragraph = styled.p`
@@ -70,6 +71,8 @@ export const CardBorder = styled.div`
     justify-content: center;
 
     position: absolute;
+
+  
 `
 export const CardText = styled.div`
     width: 500px;
@@ -88,6 +91,10 @@ export const CardText = styled.div`
     };
 
     position: relative;
+
+    @media ${device.tablet} {
+        width: 100%;
+    }
 `
 
 export const IconContent = styled.div`
