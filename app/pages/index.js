@@ -12,59 +12,70 @@ import {
   IconSocial
 } from '../styles/styles'
 
-import Link from 'next/link';
+import { useState } from 'react';
 
 export default function Home() {
+  const [infos, setInfos] = useState([
+    {
+      title: 'Provadores',
+      link: 'https://api.whatsapp.com/send?phone=5588993321272&text=Estou%20interessado%20em%20*Informações%20sobre%20Provadores*'
+    },
+    {
+      title: 'Divulgações nos stories',
+      link: 'https://api.whatsapp.com/send?phone=5588993321272&text=Estou%20interessado(a)%20em%20*Divulgações%20nos%20stories*'
+    },
+    {
+      title: 'Divulgações no feed',
+      link: 'https://api.whatsapp.com/send?phone=5588993321272&text=Estou%20interessado(a)%20em%20*Divulgações%20no%20Feed*'
+    },
+    {
+      title: 'Recebidos e parcerias',
+      link: 'https://api.whatsapp.com/send?phone=5588993321272&text=Estou%20interessado(a)%20em%20*Recebidos%20e%20Parcerias*'
+    }
+  ]);
+  const [icons, setIcons] = useState([
+    {
+      src: './instagram.png',
+      alt: 'Instagram',
+      href: 'https://www.instagram.com/leiidyane1/',
+      size: 32
+    },
+    {
+      src: './whatsapp.png',
+      alt: 'Whatsapp',
+      href: 'https://www.instagram.com/leiidyane1/',
+      size: 30
+    }
+  ])
+
+
+
   return (
     <Container>
-      <Image src='./perfil.png' alt='Perfil' />
+      <Image src='./perfil.jpg' alt='Perfil' />
 
       <Description>
-        <Heading2 text='Diego Pereira'/>
-        <Paragraph text='Professor/Programador' />
+        <Heading2 text='Leidiane Carneiro'/>
       </Description>
 
-      <CardContent>
-        <CardBorder/>
-        <CardText text='Curso de HTML/CSS/JS' />
-      </CardContent>
-
-      <CardContent>
-        <CardBorder/>
-        <CardText text='Curso de React' />
-      </CardContent>
-
-      <CardContent>
-        <CardBorder/>
-        <CardText text='Curso de Angular' />
-      </CardContent>
-
-      <CardContent>
-        <CardBorder/>
-        <CardText text='Curso de C# .Net Core' />
-      </CardContent>
-
-      <CardContent>
-        <CardBorder/>
-        <CardText text='Curso de Java' />
-      </CardContent>
+      {
+        infos.map(info => (
+          <CardContent key={info.title} href={info.link} target='_blank'>
+            <CardBorder/>
+            <CardText text={info.title} />
+          </CardContent>
+        ))
+      }
 
       <IconContent>
-        <Link href='#'>
-          <IconSocial src='./facebook.png' />
-        </Link>
-        <Link href='#'>
-          <IconSocial src='./instagram.png' />
-        </Link>
-        <Link href='#'>
-          <IconSocial src='./twitter.png' />
-        </Link>
-        <Link href='#'>
-          <IconSocial src='./linkedin.png' />
-        </Link>
-        <Link href='#'>
-          <IconSocial src='./youtube.png'/>
-        </Link>
+        {
+          icons.map(icon => (
+            <a key={icon.href} href={icon.href} target='_blank'>
+              <IconSocial src={icon.src} alt={icon.alt} width={icon.size} />
+            </a>       
+          ))
+        }
+        
       </IconContent>
       
     </Container>
