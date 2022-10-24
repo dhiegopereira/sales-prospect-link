@@ -12,6 +12,8 @@ export const Container = styled.div`
     text-align: center;
 
     background-color: #5C5C5C;
+
+    padding: 20px;
 `
 
 export const Image = styled.img`
@@ -29,10 +31,10 @@ export const Description = styled.div`
 `
 
 export const Heading2 = styled.h2`
-    font-family: 'Poppins';
+    font-family: 'Great Vibes', cursive;
     font-style: normal;
-    font-weight: 500;
-    font-size: 24px;
+    font-weight: 400;
+    font-size: 45px;
     line-height: 36px;  
     &::after {
         content: '${ props => props.text}' 
@@ -44,22 +46,27 @@ export const Paragraph = styled.p`
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
-    line-height: 30px;
+    line-height: 30px;   
 
     &::after {
         content: '${ props => props.text}' 
     };
 `
-export const CardContent = styled.div`
+export const CardContent = styled.a`
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
 
+    text-decoration: none;
+
+    color: #000000;
+
     position: relative;
 
     @media ${device.mobileL} {
-        padding:10px 5px 10px 5px;
+        /* padding:10px 5px 10px 5px; */
+        margin: 5px;
     }
 
 `
@@ -121,5 +128,4 @@ export const IconContent = styled.div`
 
 export const IconSocial = styled.img`
     margin: 5px;
-    cursor: pointer;
 `
