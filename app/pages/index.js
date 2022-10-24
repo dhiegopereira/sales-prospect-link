@@ -12,7 +12,7 @@ import {
   IconSocial
 } from './styles'
 
-import perfil from '../public/perfil.png';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -31,30 +31,40 @@ export default function Home() {
 
       <CardContent>
         <CardBorder/>
-        <CardText text='Curso de HTML/CSS/JS' />
+        <CardText text='Curso de React' />
       </CardContent>
 
       <CardContent>
         <CardBorder/>
-        <CardText text='Curso de HTML/CSS/JS' />
+        <CardText text='Curso de Angular' />
       </CardContent>
 
       <CardContent>
         <CardBorder/>
-        <CardText text='Curso de HTML/CSS/JS' />
+        <CardText text='Curso de C# .Net Core' />
       </CardContent>
 
       <CardContent>
         <CardBorder/>
-        <CardText text='Curso de HTML/CSS/JS' />
+        <CardText text='Curso de Java' />
       </CardContent>
 
       <IconContent>
-        <IconSocial src='./facebook.png' />
-        <IconSocial src='./instagram.png' />
-        <IconSocial src='./twitter.png' />
-        <IconSocial src='./linkedin.png' />
-        <IconSocial src='./youtube.png'/>
+        <Link href='#'>
+          <IconSocial src='./facebook.png' />
+        </Link>
+        <Link href='#'>
+          <IconSocial src='./instagram.png' />
+        </Link>
+        <Link href='#'>
+          <IconSocial src='./twitter.png' />
+        </Link>
+        <Link href='#'>
+          <IconSocial src='./linkedin.png' />
+        </Link>
+        <Link href='#'>
+          <IconSocial src='./youtube.png'/>
+        </Link>
       </IconContent>
       
     </Container>

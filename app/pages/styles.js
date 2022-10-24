@@ -80,24 +80,24 @@ export const CardBorder = styled.div`
     @media ${device.mobileL} {
         width: 100%;
         margin: 5px;
-    }
-
-  
+    }  
 `
 export const CardText = styled.div`
     width: 500px;
     height: 60px;
     
+    background-color: #FFFFFF;
+
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 30px;
     
-    background-color: #FFFFFF;
-    
+    padding: 15px;
+
     &::after {
-        content: '${ props => props.text}' 
+        content: '${ props => props.text}';
     };
 
     position: relative;
@@ -121,4 +121,5 @@ export const IconContent = styled.div`
 
 export const IconSocial = styled.img`
     margin: 5px;
+    cursor: pointer;
 `
